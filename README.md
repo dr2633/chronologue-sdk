@@ -27,13 +27,6 @@ Every agent action, user reflection, or event is stored as a `memory_trace`, wit
 
 Time-anchored tokens (e.g., `<tempo:SundayEvening>`) help cluster and align agent behavior to user intent.
 
-#### Retrieval Augmented Planning 
-
-Agents propose actions as structured plans:
-- `action_type`, `scheduled_for`, `status`, `origin`
-- Routed through the planner, executor, and profiler
-
-
 #### Memory Tags
 
 Semantic and time-based labels (`#deep_work`, `#q2_review`, `#5-8_notes`, `#July_travel_itenary`) used for:
@@ -47,6 +40,14 @@ Semantic and time-based labels (`#deep_work`, `#q2_review`, `#5-8_notes`, `#July
 Execution traces include:
 - `executed_at`, `duration_ms`, `deviation_ms`
 - `tempo_alignment`, `feedback_score`
+
+#### Retrieval Augmented Planning 
+
+Use memory traces filtered by tags or tempo tokens to shape agent behavior in planning and scheduling.
+
+Agents propose actions as structured plans:
+- `action_type`, `scheduled_for`, `status`, `origin`
+- Routed through the planner, executor, and profiler
 
 ---
 
