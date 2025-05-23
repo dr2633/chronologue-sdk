@@ -1,6 +1,5 @@
 ## Chronologue Python SDK 
 
-Chronologue is a memory-centric agent runtime built around integrating time as core to orchestrating and scheduling agentic behavior.
 
 We treat the calendar not just as a tool for scheduling—but as a **control surface** for directing agents to take actions at specified times, location, and duration. With Chronologue, users and developers can program and coordinate agent behavior, steer execution with memory, and audit agent performance with structured profiling.
 
@@ -12,42 +11,6 @@ Chronologue enables:
 - Temporal execution and profiling (`executed_at`, `deviation_ms`)
 - Feedback-driven improvement (`feedback_score`)
 - Portable context for LLMs, agents, and teams
-
-### Core Concepts 
-
-
-#### Memory Traces 
-
-Every agent action, user reflection, or event is stored as a `memory_trace`, with metadata such as:
-- `type`: goal, reflection, observation, calendar_event, agent_plan
-- `timestamp`, `content`, `tags`
-- Optional: `profiling` object
-
-#### Tempo Tokens
-
-Time-anchored tokens (e.g., `<tempo:SundayEvening>`) help cluster and align agent behavior to user intent.
-
-#### Memory Tags
-
-Semantic and time-based labels (`#deep_work`, `#q2_review`, `#5-8_notes`, `#July_travel_itenary`) used for:
-
-- Prompt filtering
-- Memory clustering
-- Multi-agent sharing
-
-#### Profiling 
-
-Execution traces include:
-- `executed_at`, `duration_ms`, `deviation_ms`
-- `tempo_alignment`, `feedback_score`
-
-#### Retrieval Augmented Planning 
-
-Use memory traces filtered by tags or tempo tokens to shape agent behavior in planning and scheduling.
-
-Agents propose actions as structured plans:
-- `action_type`, `scheduled_for`, `status`, `origin`
-- Routed through the planner, executor, and profiler
 
 ---
 
@@ -167,14 +130,53 @@ Future directions:
 - Keep memory trace mutations versioned
 - Add tests for trace resolution and prompt parsing
 
+---
+
+
+### Core Concepts 
+
+
+#### Memory Traces 
+
+Every agent action, user reflection, or event is stored as a `memory_trace`, with metadata such as:
+- `type`: goal, reflection, observation, calendar_event, agent_plan
+- `timestamp`, `content`, `tags`
+- Optional: `profiling` object
+
+#### Tempo Tokens
+
+Time-anchored tokens (e.g., `<tempo:SundayEvening>`) help cluster and align agent behavior to user intent.
+
+#### Memory Tags
+
+Semantic and time-based labels (`#deep_work`, `#q2_review`, `#5-8_notes`, `#July_travel_itenary`) used for:
+
+- Prompt filtering
+- Memory clustering
+- Multi-agent sharing
+
+#### Profiling 
+
+Execution traces include:
+- `executed_at`, `duration_ms`, `deviation_ms`
+- `tempo_alignment`, `feedback_score`
+
+#### Retrieval Augmented Planning 
+
+Use memory traces filtered by tags or tempo tokens to shape agent behavior in planning and scheduling.
+
+Agents propose actions as structured plans:
+- `action_type`, `scheduled_for`, `status`, `origin`
+- Routed through the planner, executor, and profiler
 
 ---
 
 ## 📄 License
 
-Apache License © 2025 Chronologue
+Apache License © 2025 Runtime Labs
 
 ---
 
-Chronologue turns time, memory, and intent into structured and sharable infrastructure — for users, agents, and systems that need to reason and act with precision. Build with it. Schedule with it. Collaborate and share. 
+Chronologue turns time, memory, and intent into structured and sharable infrastructure — for users, agents, and systems that need to reason and act with precision. 
 
+Build with it. Schedule with it. Collaborate and share. 
