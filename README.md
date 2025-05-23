@@ -1,8 +1,9 @@
-## Chronologue Python SDK 
+### Chronologue Python SDK 
 
 
 We treat the calendar not just as a tool for scheduling—but as a **control surface** for directing agents to take actions at specified times, location, and duration. With Chronologue, users and developers can program and coordinate agent behavior, steer execution with memory, and audit agent performance with structured profiling.
 
+--
 
 Chronologue enables: 
 
